@@ -1,0 +1,188 @@
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git init
+Initialized empty Git repository in C:/Users/gaurav/Desktop/Training Simform/1. Git/.git/
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git add .
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git commit -m "initial M1"
+[master (root-commit) 07deb66] initial M1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Merge/login.html.txt
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git remote add origin https://github.com/gauravMori158/merge.git
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 263 bytes | 131.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gauravMori158/merge.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master' by rebasing.
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ ]
+bash: ]: command not found
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git branch main
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git checkout main
+Switched to branch 'main'
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ touch index.html
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git add .
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git commit -m "main Index"
+[main ecbbb76] main Index
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git merge main
+Updating 07deb66..ecbbb76
+Fast-forward
+ index.html | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 277 bytes | 277.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gauravMori158/merge.git
+   07deb66..ecbbb76  master -> master
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ ^C
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git pull
+From https://github.com/gauravMori158/merge
+ * [new branch]      main       -> origin/main
+Already up to date.
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git checkout main
+Switched to branch 'main'
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git pull https://github.com/gauravMori158/merge.git
+From https://github.com/gauravMori158/merge
+ * branch            HEAD       -> FETCH_HEAD
+Already up to date.
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ touch index.html
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ cat index.html
+
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ cat index.html
+M1 M2
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git add .
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git commit -m "index m1 m2"
+[main ce11ec7] index m1 m2
+ 1 file changed, 1 insertion(+)
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git push
+fatal: The current branch main has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin main
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (main)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git merge main
+Updating ecbbb76..ce11ec7
+Fast-forward
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 281 bytes | 281.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/gauravMori158/merge.git
+   ecbbb76..ce11ec7  master -> master
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$ git log
+commit ce11ec7830435ed1fa34e20841542ee8c65236a2 (HEAD -> master, origin/master, main)
+Author: Gaurav Mori <gkmori444@gmail.com>
+Date:   Mon Jan 9 18:25:12 2023 +0530
+
+    index m1 m2
+
+commit ecbbb76d39be9add6a8e3101825195d9789226f8
+Author: Gaurav Mori <gkmori444@gmail.com>
+Date:   Mon Jan 9 18:14:49 2023 +0530
+
+    main Index
+
+commit 07deb66e01ac0b28cf8953b840ae84be840f6d5a (origin/main)
+Author: Gaurav Mori <gkmori444@gmail.com>
+Date:   Mon Jan 9 18:11:12 2023 +0530
+
+    initial M1
+
+gaurav@DESKTOP-K43UGCV MINGW64 ~/Desktop/Training Simform/1. Git (master)
+$
